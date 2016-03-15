@@ -1,0 +1,73 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\innshooter\Documents\GitHub\AAA\AAA\AndroidManifest.xml:2:1-31:12
+	xmlns:android
+		ADDED from C:\Users\innshooter\Documents\GitHub\AAA\AAA\AndroidManifest.xml:2:11-69
+	package
+		ADDED from C:\Users\innshooter\Documents\GitHub\AAA\AAA\AndroidManifest.xml:3:7-30
+	android:versionName
+		ADDED from C:\Users\innshooter\Documents\GitHub\AAA\AAA\AndroidManifest.xml:5:7-34
+	android:versionCode
+		ADDED from C:\Users\innshooter\Documents\GitHub\AAA\AAA\AndroidManifest.xml:4:7-30
+		INJECTED from C:\Users\innshooter\Documents\GitHub\AAA\AAA\AndroidManifest.xml
+		INJECTED from C:\Users\innshooter\Documents\GitHub\AAA\AAA\AndroidManifest.xml
+uses-sdk
+ADDED from C:\Users\innshooter\Documents\GitHub\AAA\AAA\AndroidManifest.xml:6:5-8:40
+	android:targetSdkVersion
+		ADDED from C:\Users\innshooter\Documents\GitHub\AAA\AAA\AndroidManifest.xml:8:9-38
+	android:minSdkVersion
+		ADDED from C:\Users\innshooter\Documents\GitHub\AAA\AAA\AndroidManifest.xml:7:9-35
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Users\innshooter\Documents\GitHub\AAA\AAA\AndroidManifest.xml:9:5-80
+	android:name
+		ADDED from C:\Users\innshooter\Documents\GitHub\AAA\AAA\AndroidManifest.xml:9:22-78
+uses-permission#android.permission.CAPTURE_AUDIO_OUTPUT
+ADDED from C:\Users\innshooter\Documents\GitHub\AAA\AAA\AndroidManifest.xml:10:5-78
+	android:name
+		ADDED from C:\Users\innshooter\Documents\GitHub\AAA\AAA\AndroidManifest.xml:10:22-76
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from C:\Users\innshooter\Documents\GitHub\AAA\AAA\AndroidManifest.xml:11:5-70
+	android:name
+		ADDED from C:\Users\innshooter\Documents\GitHub\AAA\AAA\AndroidManifest.xml:11:22-68
+application
+ADDED from C:\Users\innshooter\Documents\GitHub\AAA\AAA\AndroidManifest.xml:13:5-27:19
+	android:label
+		ADDED from C:\Users\innshooter\Documents\GitHub\AAA\AAA\AndroidManifest.xml:14:11-43
+	android:icon
+		ADDED from C:\Users\innshooter\Documents\GitHub\AAA\AAA\AndroidManifest.xml:13:18-50
+	android:theme
+		ADDED from C:\Users\innshooter\Documents\GitHub\AAA\AAA\AndroidManifest.xml:15:11-69
+activity#com.cdjx.kolo.Welcome
+ADDED from C:\Users\innshooter\Documents\GitHub\AAA\AAA\AndroidManifest.xml:16:9-23:20
+	android:label
+		ADDED from C:\Users\innshooter\Documents\GitHub\AAA\AAA\AndroidManifest.xml:17:19-51
+	android:name
+		ADDED from C:\Users\innshooter\Documents\GitHub\AAA\AAA\AndroidManifest.xml:16:19-42
+	android:launchMode
+		ADDED from C:\Users\innshooter\Documents\GitHub\AAA\AAA\AndroidManifest.xml:18:19-50
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from C:\Users\innshooter\Documents\GitHub\AAA\AAA\AndroidManifest.xml:19:13-22:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\innshooter\Documents\GitHub\AAA\AAA\AndroidManifest.xml:20:17-69
+	android:name
+		ADDED from C:\Users\innshooter\Documents\GitHub\AAA\AAA\AndroidManifest.xml:20:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\innshooter\Documents\GitHub\AAA\AAA\AndroidManifest.xml:21:17-77
+	android:name
+		ADDED from C:\Users\innshooter\Documents\GitHub\AAA\AAA\AndroidManifest.xml:21:27-74
+activity#com.cdjx.kolo.Main
+ADDED from C:\Users\innshooter\Documents\GitHub\AAA\AAA\AndroidManifest.xml:24:9-91
+	android:screenOrientation
+		ADDED from C:\Users\innshooter\Documents\GitHub\AAA\AAA\AndroidManifest.xml:24:53-89
+	android:name
+		ADDED from C:\Users\innshooter\Documents\GitHub\AAA\AAA\AndroidManifest.xml:24:19-52
+activity#com.cdjx.kolo.SetupParams
+ADDED from C:\Users\innshooter\Documents\GitHub\AAA\AAA\AndroidManifest.xml:25:9-98
+	android:screenOrientation
+		ADDED from C:\Users\innshooter\Documents\GitHub\AAA\AAA\AndroidManifest.xml:25:60-96
+	android:name
+		ADDED from C:\Users\innshooter\Documents\GitHub\AAA\AAA\AndroidManifest.xml:25:19-59
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\innshooter\Documents\GitHub\AAA\AAA\AndroidManifest.xml:29:5-66
+	android:name
+		ADDED from C:\Users\innshooter\Documents\GitHub\AAA\AAA\AndroidManifest.xml:29:22-64

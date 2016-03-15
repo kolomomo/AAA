@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/fullWidthAndHeight">
+    <LinearLayout
+        android:id="@+id/mainPage"
+        style="@style/fullWidthAndHeight"
+    	android:orientation="vertical"
+    	android:background="#f2f2f2">
+    <RelativeLayout style="@style/mainTitle">
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="40dp"
+            android:layout_height="fill_parent"
+            android:src="@drawable/ic_kxyt"
+            android:layout_alignParentLeft="true"/>
+        <TextView
+            android:id="@+id/dp_name"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="阳台"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@id/logo"/>
+        <ImageView
+            android:id="@+id/more"
+            android:layout_width="40dp"
+            android:layout_height="fill_parent"
+            android:padding="6dp"
+            android:src="@drawable/more"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_subitem">
+        <Button
+            android:id="@+id/onlinedetect"
+            style="@style/fullWidthAndHeight"
+            android:layout_weight="1"
+            android:text="在线监测"
+            android:textSize="18sp"
+            android:gravity="center"/>
+        <Button
+            android:id="@+id/control"
+            style="@style/fullWidthAndHeight"
+            android:layout_weight="1"
+            android:text="设备管控"
+            android:textSize="18sp"
+            android:gravity="center"/>
+    </LinearLayout>
+    <FrameLayout style="@style/fullWidthAndHeight">
+    <!-- ***************************************** BODY ****************************************** -->
+    	<LinearLayout
+
+        	style="@style/fullWidthAndHeight"
+        	android:orientation="vertical">
+        	<!-- ************************************ VIDEO ****************************************** -->
+     <FrameLayout
+        style="@style/fullWidthAndHeight"
+        android:layout_weight="1">
+             <SurfaceView
+        	 	android:id="@+id/Sur_Player"
+          		android:layout_width="fill_parent"
+          		android:layout_height="match_parent"
+         		android:background="#0000ff00"
+         		android:layout_above="@+id/button_view"
+         		/>
+        <RelativeLayout android:id="@+id/videoControl"
+            			style="@style/fullWidthAndHeight"
+            			android:background="#000000"
+            			android:visibility="visible">
+            	    <ImageView
+            	        android:id="@+id/videoStop"
+            	        android:layout_width="100dp"
+            	        android:layout_height="100dp"
+            	        android:layout_centerInParent="true"/>
+           		    <ImageView
+            	        android:id="@+id/zoomIn"
+            	        android:layout_width="40dp"
+            	        android:layout_height="40dp"
+            	        android:layout_alignParentTop="true"
+            	        android:layout_alignParentRight="true"
+            	        android:layout_marginRight="5dp"
+            	        android:layout_marginTop="5dp"
+            	        android:src="@drawable/anim_zoomin"/>
+            	    <ImageView
+            	        android:id="@+id/zoomOut"
+            	        android:layout_width="40dp"
+            	        android:layout_height="40dp"
+            	        android:layout_alignParentTop="true"
+            	        android:layout_alignParentRight="true"
+            	        android:layout_marginRight="5dp"
+            	        android:layout_marginTop="55dp"
+            	        android:src="@drawable/anim_zoomout"/>
+            	      <ImageView
+            	        android:id="@+id/vControl"
+            	        android:layout_width="40dp"
+            	        android:layout_height="40dp"
+            	        android:src="@drawable/btn_vcontrol"
+            	        android:layout_alignParentBottom="true"
+            	        android:layout_alignParentRight="true"
+            	        android:layout_marginRight="5dp"
+            	        android:layout_marginBottom="5dp"/>
+            <RelativeLayout
+            	        android:id="@+id/dControl"
+            	        android:layout_width="120dp"
+            	        android:layout_height="120dp"
+            	        android:layout_alignParentBottom="true"
+            	        android:layout_alignParentRight="true"
+            	        android:layout_marginRight="5dp"
+            	        android:layout_marginBottom="5dp"
+            	        android:background="@drawable/circle"
+            	        android:visibility="invisible">
+            	        <RelativeLayout
+            	            android:layout_width="120dp"
+            	            android:layout_height="40dp"
+            	            android:layout_centerInParent="true">
+            	            <ImageView
+            	                android:id="@+id/btn_to_left"
+            	                android:layout_width="40dp"
+            	                android:layout_height="40dp"
+            	                android:background="@drawable/anim_toleft"
+            	                android:layout_alignParentLeft="true"/>
+            	            <ImageView
+            	                android:id="@+id/btn_to_right"
+            	                android:layout_width="40dp"
+            	                android:layout_height="40dp"
+            	                android:layout_alignParentRight="true"
+            	                android:background="@drawable/anim_toright"/>
+            	        </RelativeLayout>
+            	        <RelativeLayout
+            	            android:layout_width="40dp"
+            	            android:layout_height="120dp"
+            	            android:layout_centerInParent="true">
+            	            <ImageView
+            	                android:id="@+id/btn_to_up"
+            	                android:layout_width="40dp"
+            	                android:layout_height="40dp"
+            	                android:layout_alignParentTop="true"
+            	                android:background="@drawable/anim_toup"/>
+            	            <ImageView
+            	                android:id="@+id/btn_to_down"
+            	                android:layout_width="40dp"
+            	                android:layout_height="40dp"
+            	                android:layout_alignParentBottom="true"
+            	                android:background="@drawable/anim_todown"/>
+            	        </RelativeLayout>
+            	    </RelativeLayout>
+
+         </RelativeLayout>
+       <RelativeLayout
+            android:id="@+id/widget_Play"
+         	style="@style/fullWidthAndHeight"
+         	android:orientation="vertical"
+            android:focusable="true"
+			android:focusableInTouchMode="true">
+			<LinearLayout
+			    android:id="@+id/button_view"
+			    android:layout_width="fill_parent"
+            	android:layout_height="0dp"
+			    android:background="#f2f2f2"
+			    android:orientation="horizontal"
+			    android:layout_alignParentBottom="true">
+			<Button
+                android:id="@+id/btn_Login"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="连接"
+                android:textColor="#ff000000"
+                android:typeface="sans" />
+			 <Button
+			    android:id="@+id/btn_Preview"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@+id/btn_Login"
+                android:text="预览"
+                android:textColor="#ff000000"
+                android:typeface="sans"/>
+             </LinearLayout>
+
+		</RelativeLayout>
+
+		<RelativeLayout
+                	android:id="@+id/pause"
+                	style="@style/fullWidthAndHeight"
+                	android:visibility="visible"
+                	android:background="#000000">
+                	<ImageView
+                    	android:id="@+id/playorpause"
+                    	android:layout_width="60dp"
+                    	android:layout_height="60dp"
+                    	android:background="@drawable/pause_xh"
+                    	android:layout_centerInParent="true"/>
+                	<TextView
+                	    android:id="@+id/videoTimeOut"
+                	    android:layout_width="wrap_content"
+                	    android:layout_height="wrap_content"
+                	    android:text="加载视频超时，可点击按钮重试"
+                	    android:textColor="#ffffff"
+                	    android:textSize="16sp"
+                	    android:layout_below="@id/playorpause"
+                	    android:layout_centerHorizontal="true"
+                	    android:layout_marginTop="10dp"
+                	    android:visibility="gone"/>
+            	</RelativeLayout>
+                <RelativeLayout
+                	android:id="@+id/startVideoAnim"
+                	style="@style/fullWidthAndHeight"
+                	android:visibility="invisible"
+                	android:background="#262626">
+                	<ImageView
+                    	android:id="@+id/loadingVideo"
+                    	android:layout_width="50dp"
+                    	android:layout_height="50dp"
+                    	android:background="@drawable/loading"
+                    	android:layout_centerInParent="true"/>
+            	</RelativeLayout>
+	</FrameLayout>
+        	<!-- ************************************ DATA ****************************************** -->
+           	<LinearLayout
+				android:id="@+id/onlinePage"
+				style="@style/fullWidthAndHeight"
+               android:orientation="vertical"
+               android:layout_weight="1"
+               android:background="#f2f2f2" android:visibility="visible">
+               <TextView
+                   android:id="@+id/onlineDataTableTitle"
+                   android:layout_width="fill_parent"
+                   android:layout_height="40dp"
+                   android:text="当前环境数据"
+                   android:textColor="#656565"
+                   android:textSize="16sp"
+                   android:gravity="center"
+                   android:background="@drawable/datatitlebar"/>
+
+               <!--<ScrollView
+                   style="@style/fullWidthAndHeight"
+                   android:layout_margin="5dp"
+                   android:padding="1dp"
+                   android:background="@drawable/bg_table">-->
+                   <LinearLayout
+                       style="@style/fullWidthAndHeight"
+                   		android:layout_margin="5dp"
+                   		android:padding="1dp"
+                   		android:background="@drawable/bg_table"
+                       	android:orientation="horizontal">
+            	       <LinearLayout
+            	           android:layout_width="fill_parent"
+            	           android:layout_height="fill_parent"
+            	           android:orientation="vertical"
+            	           android:layout_weight="1">
+            	           <LinearLayout
+            	               android:layout_width="fill_parent"
+            	               android:layout_height="fill_parent"
+            	               android:layout_weight="1"
+            	               android:orientation="horizontal"
+            	               android:background="#e8f6f1">
+            	               <TextView
+            	                   style="@style/tableRowName"
+            	                   android:text="空气温度/℃:"/>
+            	               <TextView
+            	                   android:id="@+id/DATA0"
+            	                   style="@style/tableRowData"
+            	                   android:background="#e8f6f1"
+            	                   android:text="--"/>
+            	           </LinearLayout>
+            	           <ImageView android:layout_width="fill_parent" android:layout_height="1dp" android:background="#999999"/>
+	            	       <LinearLayout
+	            	           android:layout_width="fill_parent"
+	            	           android:layout_height="fill_parent"
+            	               android:layout_weight="1"
+	            	           android:orientation="horizontal">
+            	               <TextView
+            	                   style="@style/tableRowName"
+            	                   android:text="空气湿度/%RH:"/>
+            	               <TextView
+            	                   android:id="@+id/DATA1"
+            	                   style="@style/tableRowData"
+            	                   android:text="--"/>
+	            	       </LinearLayout>
+	            	       <ImageView android:layout_width="fill_parent" android:layout_height="1dp" android:background="#999999"/>
+	            	       <LinearLayout
+	            	           android:layout_width="fill_parent"
+	            	           android:layout_height="fill_parent"
+            	               android:layout_weight="1"
+	            	           android:orientation="horizontal"
+	            	           android:background="#e8f6f1">
+            	               <TextView
+            	                   style="@style/tableRowName"
+            	                   android:text="光照/Lux:"/>
+            	               <TextView
+            	                   android:id="@+id/DATA2"
+            	                   style="@style/tableRowData"
+            	                   android:text="--"/>
+	            	       </LinearLayout>
+	            	       <ImageView android:layout_width="fill_parent" android:layout_height="1dp" android:background="#999999"/>
+	            	       <LinearLayout
+	            	           android:layout_width="fill_parent"
+	            	           android:layout_height="fill_parent"
+            	               android:layout_weight="1"
+	            	           android:orientation="horizontal">
+            	               <LinearLayout style="@style/tableRowName" android:orientation="horizontal">
+            	                   <TextView
+              	                       android:id="@+id/datatitle4"
+            	                       style="@style/tableRowTextView"
+            	                       android:layout_width="wrap_content"
+            	                       android:layout_height="20dp"
+            	                       android:text="CO"/>
+            	                   <TextView
+             	                       android:id="@+id/datatitle5"
+            	                       android:layout_width="wrap_content"
+            	                       android:layout_height="20dp"
+            	                       android:textColor="#8f8f8f"
+            	                       android:textSize="10sp"
+            	                       android:text="2"
+            	                       android:gravity="bottom"/>
+            	                   <TextView
+             	                       android:id="@+id/datatitle6"
+            	                       style="@style/tableRowTextView"
+            	                       android:layout_width="wrap_content"
+            	                       android:layout_height="20dp"
+            	                       android:text="/ppm:"/>
+            	               </LinearLayout>
+            	               <TextView
+            	                   android:id="@+id/DATA3"
+            	                   style="@style/tableRowData"
+            	                   android:text="--"/>
+	            	       </LinearLayout>
+	            	   </LinearLayout>
+	            	   <ImageView android:layout_width="1dp" android:layout_height="fill_parent" android:background="#999999"/>
+	            	   <LinearLayout
+	            	       android:layout_width="fill_parent"
+	            	       android:layout_height="fill_parent"
+	            	       android:orientation="vertical"
+	            	       android:layout_weight="1"
+						   >
+	            	       <LinearLayout
+	            	           android:layout_width="fill_parent"
+	            	           android:layout_height="fill_parent"
+	            	           android:layout_weight="1"
+	            	           android:orientation="horizontal"
+	            	           android:background="#e8f6f1">
+            	               <TextView
+            	                   android:id="@+id/datatitle7"
+            	                   style="@style/tableRowName"
+            	                   android:layout_width="wrap_content"
+            	                   android:text="表层水分/%RH:"/>
+            	               <TextView
+            	                   android:id="@+id/DATA4"
+            	                   style="@style/tableRowData"
+            	                   android:text="--"/>
+	            	       </LinearLayout>
+	            	       <ImageView android:layout_width="fill_parent" android:layout_height="1dp" android:background="#999999"/>
+	            	       <LinearLayout
+	            	           android:layout_width="fill_parent"
+	            	           android:layout_height="fill_parent"
+	            	           android:layout_weight="1"
+	            	           android:orientation="horizontal">
+            	               <TextView
+            	                   android:id="@+id/datatitle1"
+            	                   style="@style/tableRowName"
+            	                   android:layout_width="wrap_content"
+            	                   android:text="露点/℃:"/>
+            	               <TextView
+            	                   android:id="@+id/DATA5"
+            	                   style="@style/tableRowData"
+            	                   android:text="--"/>
+	            	       </LinearLayout>
+	            	       <ImageView android:layout_width="fill_parent" android:layout_height="1dp" android:background="#999999"/>
+	            	       <LinearLayout
+	            	           android:layout_width="fill_parent"
+	            	           android:layout_height="fill_parent"
+	            	           android:layout_weight="1"
+	            	           android:orientation="horizontal"
+	            	           android:background="#e8f6f1">
+            	               <TextView
+            	                   android:id="@+id/datatitle2"
+            	                   style="@style/tableRowName"
+            	                   android:layout_width="wrap_content"
+            	                   android:text="风向/度:"/>
+            	               <TextView
+            	                   android:id="@+id/DATA6"
+            	                   style="@style/tableRowData"
+            	                   android:text="--"/>
+	            	       </LinearLayout>
+	            	       <ImageView android:layout_width="fill_parent" android:layout_height="1dp" android:background="#999999"/>
+	            	       <LinearLayout
+	            	           android:layout_width="fill_parent"
+	            	           android:layout_height="fill_parent"
+	            	           android:layout_weight="1"
+	            	           android:orientation="horizontal">
+            	               <TextView
+            	                   android:id="@+id/datatitle3"
+            	                   style="@style/tableRowName"
+            	                   android:text="风速/m/s:"/>
+            	               <TextView
+            	                   android:id="@+id/DATA7"
+            	                   style="@style/tableRowData"
+            	                   android:text="--"/>
+	            	       </LinearLayout>
+	            	  	</LinearLayout>
+	                </LinearLayout>
+               <!--   </ScrollView>   -->
+ 			</LinearLayout>
+			<LinearLayout
+				android:id="@+id/controlPage"
+				style="@style/fullWidthAndHeight"
+				android:orientation="vertical"
+				android:layout_weight="1"
+				android:visibility="gone">
+				<ImageView
+					android:layout_width="fill_parent"
+					android:layout_height="1dp"
+					android:background="#1a9477"/>
+				<LinearLayout android:id="@+id/cpageForLianDongDT" style="@style/fullWidthAndHeight" android:orientation="vertical" >
+					<RelativeLayout android:layout_width="fill_parent" android:layout_height="63dp" android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+						<ImageView style="@style/line" android:id="@+id/line0"/>
+						<RelativeLayout style="@style/fullWidthAndHeight" android:layout_above="@id/line0">
+							<ImageView style="@style/iconImageView" android:src="@drawable/watering"/>
+							<TextView style="@style/gkTextView" android:text="喷灌"/>
+							<ImageView android:id="@+id/key0" style="@style/keyImageView"/>
+						</RelativeLayout>
+					</RelativeLayout>
+					<RelativeLayout android:layout_width="fill_parent" android:layout_height="63dp" android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+						<ImageView style="@style/line" android:id="@+id/line1"/>
+						<RelativeLayout style="@style/fullWidthAndHeight" android:layout_above="@id/line1">
+							<ImageView style="@style/iconImageView" android:src="@drawable/icon_shuilian"/>
+							<TextView style="@style/gkTextView" android:text="湿帘"/>
+							<ImageView android:id="@+id/key1" style="@style/keyImageView"/>
+						</RelativeLayout>
+					</RelativeLayout>
+					<RelativeLayout android:layout_width="fill_parent" android:layout_height="63dp" android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+						<ImageView style="@style/line" android:id="@+id/line2"/>
+						<RelativeLayout style="@style/fullWidthAndHeight" android:layout_above="@id/line2">
+							<ImageView style="@style/iconImageView" android:src="@drawable/buguang_kx"/>
+							<TextView style="@style/gkTextView" android:text="补光"/>
+							<ImageView android:id="@+id/key2" style="@style/keyImageView"/>
+						</RelativeLayout>
+					</RelativeLayout>
+					<RelativeLayout android:layout_width="fill_parent" android:layout_height="63dp" android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+						<ImageView style="@style/line" android:id="@+id/line3"/>
+						<RelativeLayout style="@style/fullWidthAndHeight" android:layout_above="@id/line3">
+							<ImageView style="@style/iconImageView" android:src="@drawable/paifeiji"/>
+							<TextView style="@style/gkTextView" android:text="排风扇"/>
+							<ImageView android:id="@+id/key3" style="@style/keyImageView"/>
+						</RelativeLayout>
+					</RelativeLayout>
+					<RelativeLayout android:layout_width="fill_parent" android:layout_height="0dp" android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+						<ImageView style="@style/line" android:id="@+id/line4"/>
+						<RelativeLayout style="@style/fullWidthAndHeight" android:layout_above="@id/line4">
+							<ImageView style="@style/iconImageView" android:src="@drawable/pengguan"/>
+							<TextView style="@style/gkTextView" android:text="喷灌"/>
+							<ImageView android:id="@+id/key4" style="@style/keyImageView"/>
+						</RelativeLayout>
+					</RelativeLayout>
+				</LinearLayout>
+			</LinearLayout>
+
+    	</LinearLayout>
+
+
+    	</FrameLayout>
+    </LinearLayout>
+
+<!-- ********************************************************** to more ***************************************** -->
+<RelativeLayout
+    android:id="@+id/MorePage"
+    style="@style/fullWidthAndHeight"
+    android:visibility="gone">
+    <LinearLayout
+        android:layout_width="150dp"
+        android:layout_height="207dp"
+        android:orientation="vertical"
+        android:layout_marginTop="40dp"
+        android:layout_alignParentRight="true"
+        android:background="#999999">
+        <LinearLayout android:id="@+id/administrator" style="@style/moreItemFirst">
+            <ImageView style="@style/imageViewInMorePage" android:src="@drawable/admin"/>
+            <TextView style="@style/textViewInMorePage" android:text="管理员"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/setup" style="@style/moreItemOther">
+            <ImageView style="@style/imageViewInMorePage" android:src="@drawable/setup"/>
+            <TextView style="@style/textViewInMorePage" android:text="参数设置"/>
+        </LinearLayout>
+
+       <LinearLayout android:id="@+id/SCDP1" style="@style/moreItemOther">
+            <ImageView style="@style/imageViewInMorePage" android:src="@drawable/dpicon"/>
+            <TextView style="@style/textViewInMorePage" android:text="开心阳台NO.1"/>
+        </LinearLayout>
+       <LinearLayout android:id="@+id/SCDP2" style="@style/moreItemOther">
+            <ImageView style="@style/imageViewInMorePage" android:src="@drawable/dpicon"/>
+            <TextView style="@style/textViewInMorePage" android:text="开心阳台NO.2"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/quit" style="@style/moreItemOther">
+            <ImageView style="@style/imageViewInMorePage" android:src="@drawable/quit2"/>
+            <TextView style="@style/textViewInMorePage" android:text="退出"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
+
+<RelativeLayout
+    android:id="@+id/quitDialog"
+    style="@style/fullWidthAndHeight"
+    android:visibility="gone"
+    android:background="#262626">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="160dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/bg_dg_1"
+        android:layout_centerInParent="true">
+        <RelativeLayout
+        	android:layout_width="fill_parent"
+        	android:layout_height="fill_parent"
+        	android:orientation="vertical"
+        	android:layout_margin="5dp"
+        	android:background="@drawable/bg_dg_0"
+        	android:layout_centerInParent="true">
+        	<LinearLayout
+            	android:layout_width="fill_parent"
+            	android:layout_height="40dp"
+            	android:orientation="horizontal"
+        		android:background="@drawable/dg_titlebar">
+            	<ImageView
+                	android:layout_width="35dp"
+                	android:layout_height="35dp"
+                	android:scaleType="centerInside"
+                	android:layout_marginLeft="5dp"
+                	android:layout_gravity="center_vertical"
+                	android:background="@drawable/remaindersymbol"/>
+
+            	<TextView
+                	android:layout_width="wrap_content"
+                	android:layout_height="fill_parent"
+                	android:text="提示"
+                	android:textSize="20sp"
+                	android:textColor="#404040"
+                	android:layout_marginLeft="5dp"
+                	android:gravity="center_vertical"/>
+        	</LinearLayout>
+
+        	<TextView
+        	    android:layout_width="wrap_content"
+        	    android:layout_height="wrap_content"
+        	    android:text="确定退出开心阳台？"
+        	    android:textColor="#ffffff"
+        	    android:textSize="20sp"
+        	    android:layout_centerInParent="true"/>
+        	<RelativeLayout
+        	    android:layout_width="fill_parent"
+        	    android:layout_height="30dp"
+        	    android:layout_alignParentBottom="true"
+        	    android:layout_marginLeft="10dp"
+        	    android:layout_marginRight="10dp"
+        	    android:layout_marginBottom="10dp">
+        	    <LinearLayout
+        	        android:layout_width="wrap_content"
+        	    	android:layout_height="30dp"
+        	    	android:orientation="horizontal"
+        	    	android:layout_centerInParent="true">
+             		<Button
+					    android:id="@+id/btnQuitCancle"
+					    android:layout_width="100dp"
+					    android:layout_height="fill_parent"
+					    android:background="@drawable/bg_dg_button"
+					    android:text="取消"
+					    android:textSize="18sp"
+                		android:textColor="#404040"/>
+					<Button
+					    android:id="@+id/btnQuitYes"
+					    android:layout_width="100dp"
+					    android:layout_height="fill_parent"
+					    android:layout_marginLeft="10dp"
+					    android:background="@drawable/bg_dg_button"
+					    android:text="退出"
+					    android:textSize="18sp"
+                		android:textColor="#404040"/>
+				</LinearLayout>
+        	</RelativeLayout>
+    	</RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
+
+<RelativeLayout
+    android:id="@+id/netErrorPage"
+    style="@style/fullWidthAndHeight"
+    android:visibility="gone"
+    android:background="#262626">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:background="@drawable/bg_net_error"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_centerInParent="true">
+        <RelativeLayout
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_margin="5dp"
+        	android:layout_centerInParent="true">
+        	<LinearLayout
+            	android:layout_width="fill_parent"
+            	android:layout_height="wrap_content"
+            	android:orientation="horizontal">
+            	<TextView
+            	    android:id="@+id/netErrorTV"
+                	android:layout_width="fill_parent"
+                	android:layout_height="wrap_content"
+                	android:text="很抱歉，您当前的网络请求超时!"
+                	android:textSize="18sp"
+                	android:textColor="#404040"
+                	android:gravity="center"/>"
+        	</LinearLayout>
+
+        	<ImageView
+        	    android:layout_width="80dp"
+        	    android:layout_height="80dp"
+        	    android:src="@drawable/icon_wifi"
+        	    android:layout_centerInParent="true"/>
+        	<RelativeLayout
+        	    android:layout_width="wrap_content"
+        	    android:layout_height="30dp"
+        	    android:layout_alignParentBottom="true"
+        	    android:layout_centerHorizontal="true"
+        	    android:layout_marginBottom="10dp">
+        	    <LinearLayout
+        	        android:layout_width="wrap_content"
+        	    	android:layout_height="30dp"
+        	    	android:orientation="horizontal"
+        	    	android:layout_centerInParent="true">
+					<Button
+					    android:id="@+id/setNetWork"
+					    android:layout_width="70dp"
+					    android:layout_height="30dp"
+					    android:background="@drawable/bg_netbtn"
+					    android:text="重试"
+					    android:textSize="18sp"
+                		android:textColor="#404040"/>
+					<Button
+					    android:id="@+id/linkTryAgain"
+					    android:layout_width="100dp"
+					    android:layout_height="30dp"
+					    android:background="@drawable/bg_netbtn"
+					    android:layout_marginLeft="5dp"
+					    android:text="检查地址"
+					    android:textSize="18sp"
+                		android:textColor="#404040"/>
+					<Button
+					    android:id="@+id/linkCancle"
+					    android:layout_width="70dp"
+					    android:layout_height="30dp"
+					    android:background="@drawable/bg_netbtn"
+					    android:layout_marginLeft="5dp"
+					    android:text="取消"
+					    android:textSize="18sp"
+                		android:textColor="#404040"/>
+				</LinearLayout>
+        	</RelativeLayout>
+    	</RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
+
+<RelativeLayout
+ 	android:id="@+id/controlDialog"
+    style="@style/fullWidthAndHeight"
+    android:visibility="gone"
+    android:background="#262626">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="160dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/bg_dg_1"
+        android:layout_centerInParent="true">
+        <RelativeLayout
+        	android:layout_width="fill_parent"
+        	android:layout_height="fill_parent"
+        	android:orientation="vertical"
+        	android:layout_margin="5dp"
+        	android:background="@drawable/bg_dg_0"
+        	android:layout_centerInParent="true">
+        	<LinearLayout
+            	android:layout_width="fill_parent"
+            	android:layout_height="40dp"
+            	android:orientation="horizontal"
+        		android:background="@drawable/dg_titlebar">
+            	<ImageView
+                	android:layout_width="35dp"
+                	android:layout_height="35dp"
+                	android:scaleType="centerInside"
+                	android:layout_marginLeft="5dp"
+                	android:layout_gravity="center_vertical"
+                	android:background="@drawable/remaindersymbol"/>
+
+            	<TextView
+                	android:layout_width="wrap_content"
+                	android:layout_height="fill_parent"
+                	android:text="操作提醒"
+                	android:textSize="20sp"
+                	android:textColor="#404040"
+                	android:layout_marginLeft="5dp"
+                	android:gravity="center_vertical"/>
+        	</LinearLayout>
+
+        	<TextView
+        	    android:id="@+id/tv_control_remaind"
+        	    android:layout_width="wrap_content"
+        	    android:layout_height="wrap_content"
+        	    android:text="确定执行此操作？"
+        	    android:textColor="#ffffff"
+        	    android:textSize="20sp"
+        	    android:layout_centerInParent="true"/>
+        	<RelativeLayout
+        	    android:layout_width="fill_parent"
+        	    android:layout_height="30dp"
+        	    android:layout_alignParentBottom="true"
+        	    android:layout_marginLeft="10dp"
+        	    android:layout_marginRight="10dp"
+        	    android:layout_marginBottom="10dp">
+        	    <LinearLayout
+        	        android:layout_width="wrap_content"
+        	    	android:layout_height="30dp"
+        	    	android:orientation="horizontal"
+        	    	android:layout_centerInParent="true">
+					<Button
+					    android:id="@+id/controlCancle"
+					    android:layout_width="100dp"
+					    android:layout_height="fill_parent"
+					    android:background="@drawable/bg_dg_button"
+					    android:text="取消"
+					    android:textSize="18sp"
+                		android:textColor="#404040"/>
+					<Button
+					    android:id="@+id/controlYes"
+					    android:layout_width="100dp"
+					    android:layout_height="fill_parent"
+					    android:layout_marginLeft="10dp"
+					    android:background="@drawable/bg_dg_button"
+					    android:text="确定"
+					    android:textSize="18sp"
+                		android:textColor="#404040"/>
+				</LinearLayout>
+        	</RelativeLayout>
+    	</RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
+
+<RelativeLayout
+    android:id="@+id/linkAnimPage"
+    style="@style/fullWidthAndHeight"
+    android:visibility="gone"
+    android:background="#000000">
+	<ImageView
+	    android:id="@+id/linkAnim"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_centerInParent="true"
+	    android:src="@drawable/loading"/>
+	<TextView
+	    android:id="@+id/loadingTV"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/linkAnim"
+	    android:layout_marginTop="10dp"
+	    android:text="正在载入……"
+	    android:textSize="22sp"
+	    android:textColor="#ffffff"
+	    android:layout_centerHorizontal="true"/>
+</RelativeLayout>
+</FrameLayout><!-- From: file:/C:/Users/innshooter/Documents/GitHub/AAA/AAA/res/layout/main.xml -->

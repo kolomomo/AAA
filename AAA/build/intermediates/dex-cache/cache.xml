@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\innshooter\Documents\GitHub\AAA\AAA\libs\android-support-v4.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="91a1b1aabf740a6f64c2f73f5b0dc6611779ac8b">
+        <dex dex="C:\Users\innshooter\Documents\GitHub\AAA\AAA\build\intermediates\pre-dexed\debug\android-support-v4-f8ba18ebcc6dd86aee1ca885ad30c6c162ceb6cd.jar" />
+    </item>
+    <item
+        jar="C:\Users\innshooter\Documents\GitHub\AAA\AAA\libs\HCNetSDK (2).jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="f49401c50e227ab58ea75216430321d71b4cd1a6">
+        <dex dex="C:\Users\innshooter\Documents\GitHub\AAA\AAA\build\intermediates\pre-dexed\debug\HCNetSDK (2)-2daf3d19de483e3f823c7946551f3aa8e67c7dcd.jar" />
+    </item>
+
+</items>

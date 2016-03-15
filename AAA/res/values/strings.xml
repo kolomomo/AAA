@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">XXXX</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+	<string name="not_set">点击设置</string>
+	<string name="cannotControl1">当前为自动控制模式，不可操作</string>
+	<string name="cannotControl2">当前为手动控制模式，不可操作</string>
+</resources>
